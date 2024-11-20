@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flex pentru body pentru a fixa footer-ul jos */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main ocupă spațiul rămas */
+main {
+    flex: 1;
+}
+
+/* Stil pentru footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+/* Stilizare globală */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Stilizare header */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #ffffff;
+    animation: pulse 2s infinite;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: color 0.3s, background-color 0.5s;
+}
+
+nav ul li a:hover {
+    color: #d6529b;
+    background-color: #ddd;
+}
+
+.dropdown {
+    position: relative; /* Aliniere relativă pentru a permite poziționarea absolută */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    z-index: 1; /* Asigură că apare deasupra altor elemente */
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 0.5em 1em;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: #d6508c;
+}
+
+/* Afișare meniu la hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Background images */
+.index {
+    background-image: url('feat-lacul-como.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.roma {
+    background-image: url('bilete-de-avion-ieftine-roma-dus-intors-noiembrie-2023-ianuarie-2024-www-planuridevacanta-ro-896x708.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.venetia {
+    background-image: url('Obiective-turistice-Venetia.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.florenta {
+    background-image: url('obiective-turistice-in-florenta.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.milano {
+    background-image: url('locuri-de-vizitat-in-milano.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sectiuni responsive */
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .content {
+        padding: 1em;
+    }
+}
+.container {
+    display: flex; /* Afișează conținutul pe două coloane */
+    justify-content: space-between; /* Adaugă spațiu între coloane */
+    align-items: center; /* Centrează vertical coloanele */
+    padding: 20px; /* Spațiu interior pentru container */
+    max-width: 1200px; /* Lățimea maximă a paginii */
+    margin: 0 auto; /* Centrează containerul pe pagină */
+  }
+  
+  /* Stil pentru coloana de text */
+  .text-column {
+    flex: 1; /* Ocupă 50% din lățime */
+    padding-right: 20px; /* Spațiu între text și imagine */
+  }
+  
+  .text-column h1 {
+    color: #d6529b;
+    font-size: 32px; /* Dimensiune titlu */
+  }
+  
+  .text-column p {
+    color: #333; /* Culoare text */
+    font-size: 16px; /* Dimensiune text */
+    line-height: 1.6; /* Înălțimea rândului */
+  }
+  
+  /* Stil pentru coloana de imagine */
+  .image-column {
+    flex: 1; /* Ocupă 50% din lățime */
+   text-align: center; /* Centrează imaginea */
+  }
+  
+  .image-column img {
+    max-width: 100%; /* Imaginea se ajustează la lățimea coloanei */
+    height: auto; /* Păstrează proporțiile imaginii */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră pentru imagine */
+  }
+/* Stilizare text */
+h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+  body.videoclip header {
+    background-color: #DEB887; 
+    color: white; 
+}
+ body.index header {
+    background-color: #DEB887; 
+    color: white; 
+}
+  .separator-section hr {
+    margin: 20px auto;
+    width: 80%;
+    height: 2px;
+    background-color: #ccc;
+    border: none;
+  }
+
+  .content-section {
+    display: flex;
+    flex-wrap: wrap; /* Flexibil pentru dispozitive mici */
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  /* Stil pentru coloane */
+  .column {
+    flex: 1 1 48%; /* Fiecare coloană ocupă 48% din lățime */
+    padding: 10px;
+  }
+  
+  /* Text column */
+  .text-column h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .text-column p {
+    font-size: 16px;
+    text-align: justify;
+  }
+  
+  /* Video column */
+  .video-column .my-video {
+    width: 100%;
+    height: 315px; /* Dimensiune standard pentru videoclip */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Media Queries pentru ecrane mici */
+  @media (max-width: 768px) {
+    .column {
+      flex: 1 1 100%; /* Coloanele devin pe un singur rând */
+    }
+    .video-column .my-video {
+      height: 250px; /* Dimensiunea videoclipului pe dispozitive mai mici */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-header h1 {
+      font-size: 20px;
+    }
+    .text-column p {
+      font-size: 14px;
+    }
+  }
+  .container {
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #f2a9c6;
+    color: white;
+    font-size: 30px;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in, transform 0.5s ease-out, border-radius 1s ease-in-out;
+    display: flex;
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center; /* Centrează pe verticală */
+    height: 10vh; */
+    
+  }
+  
+  .btn:hover {
+    background-color: #d73f7e; 
+    transform: scale(1.2);     
+    border-radius: 70px;      
+  }
+  .three-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .column {
+    text-align: center;
+  }
+  
+  .column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .column img {
+    width: 350px;
+    height: 250px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .column img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  table {
+    width: 100%; /* Tabelul ocupă întreaga lățime */
+    border-collapse: collapse; /* Elimină spațiile dintre celule */
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #d73f7e; /* Bordură generală pentru tabel */
+}
+
+thead th {
+    background-color: #d73f7e;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    border: 2px solid #d73f7e; /* Bordură pentru celulele din header */
+}
+
+tbody td {
+    border: 1px solid #ddd; /* Bordură subțire între celule */
+    padding: 15px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Rânduri alternante */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Efect de hover */
+}
+
+/* Stilizare coloane */
+td:first-child {
+    font-weight: bold;
+    width: 30%;
+}
+td:last-child {
+    width: 70%;
+}
+.custom-header {
+    width: 100%; 
+    height: 700px; 
+    background-image: url('01-39.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    text-align: center; 
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.custom-header.narrow {
+    width: 160%; /* Lățime redusă pentru header */
+    margin: 0 auto; /* Centrează headerul pe pagină */
+}
+.card {
+    width: 250px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.card-content p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+}
+.sectiune {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.image {
+    max-width: 50%; /* Imaginea se redimensionează în funcție de secțiune */
+    height: auto; /* Păstrează proporțiile */
+    border-radius: 8px; /* Colțuri rotunjite */
+    margin-top: 15px; /* Spațiu între imagine și text */
+}
+
+h1 {
+    margin: 0 0 10px;
+    color: #333;
+}
+header h1:before {
+    content: " ✈️ ";
+}
+
+header h1:after {
+    content: " ✈️ ";
+}
